@@ -1,0 +1,7 @@
+{
+  "name": "learn-vocab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
