@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@capacitor/ios": "^3.4.3",
+    "@capacitor/toast": "^1.0.8",
     "@firebase/database": "^0.12.5",
     "firebase": "^9.6.8"
   }

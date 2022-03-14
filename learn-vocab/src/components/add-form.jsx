@@ -24,32 +24,31 @@ export default function AddForm({saveNew}) {
 
 async function handleSubmit(e) { 
   e.preventDefault();
-  alert("Hello " + word);
-  saveNew(word);
+  
+  saveNew({word,meaning});
   setWord("");
-  // setMeaning("");
+  setMeaning("");
 };
 
   return ( 
     <IonContent>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form>
         <IonList lines="full" class="ion-no-margin">
         <IonItem>
             <IonLabel position="floating">New Word</IonLabel>
             <IonInput value={word} 
-              onChange={(e) => setWord(e.target.value)}></IonInput>
+              onIonChange={(e) => setWord(e.target.value)}></IonInput>
         </IonItem>
         <IonItem>
             <IonLabel position="floating">Meaning</IonLabel>
             <IonInput value={meaning}
-            onChange={(e) => setMeaning(e.target.value)}></IonInput>
+            onIonChange={(e) => setMeaning(e.target.value)}></IonInput>
         </IonItem>
 
         </IonList>
         </form>
 
-    <IonButton expand="block" fill="solid" class="save-button" type="submit">Save</IonButton>
-    
+        <IonButton expand="block" fill="solid" class="save-button" type="button" onClick={(e) => {handleSubmit(e);}}>Save</IonButton>    
     </IonContent>
   );
 }; 

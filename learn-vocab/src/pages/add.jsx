@@ -1,35 +1,34 @@
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonInput,IonButton, IonList } from '@ionic/react';
-import app from "../firebase-config";
-
+import app, {wordsRef} from "../firebase-config";
+import { Toast } from "@capacitor/toast";
 import './add.css';
 import './global.css';
 import AddForm from '../components/add-form';
 
 export default function Add() { 
-  // const [text, setText] = useState([]);
-  const word = ""; //change to state
-  const meaning = ""; //change to state
-  const [words, setWords] = useState([]);
-
+ 
 // app js?
-  const saveNew = (word) => {
-    const saveToFirebase = app.firestore();
-    saveToFirebase.collection("words").add({
-     
-      item: word
-    });
-  };
+  const saveNew =async (word) => {
+    debugger;
+    var url = wordsRef.toString()+".json";
 
-  const getWords = () => {
-    const getFromFirebase = app.firestore().collection("words");
-    getFromFirebase.onSnapshot((querySnapShot) => {
-      const saveFirebaseWords = [];
-      querySnapShot.forEach((doc) => {
-        saveFirebaseWords.push(doc.data());
+    var response = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(word)
+  });
+  if (response.ok) {
+      
+
+      await Toast.show({
+          text: "New word created!"
       });
-      setWords(saveFirebaseWords);
-    });
+  } else {
+      await Toast.show({
+          text: "Error. Try again!"
+      });
+  }
+
   };
 
   return (
