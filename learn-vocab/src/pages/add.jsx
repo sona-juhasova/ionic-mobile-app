@@ -1,10 +1,37 @@
-import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import React, { useState } from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonInput,IonButton, IonList } from '@ionic/react';
+import app from "../firebase-config";
+
 import './add.css';
 import './global.css';
+import AddForm from '../components/add-form';
 
-export default function add() {
+export default function Add() { 
+  // const [text, setText] = useState([]);
+  const word = ""; //change to state
+  const meaning = ""; //change to state
+  const [words, setWords] = useState([]);
+
+// app js?
+  const saveNew = (word) => {
+    const saveToFirebase = app.firestore();
+    saveToFirebase.collection("words").add({
+     
+      item: word
+    });
+  };
+
+  const getWords = () => {
+    const getFromFirebase = app.firestore().collection("words");
+    getFromFirebase.onSnapshot((querySnapShot) => {
+      const saveFirebaseWords = [];
+      querySnapShot.forEach((doc) => {
+        saveFirebaseWords.push(doc.data());
+      });
+      setWords(saveFirebaseWords);
+    });
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -18,7 +45,10 @@ export default function add() {
             <IonTitle size="large">Add new words!</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+       
+    {/* Add new word form component */}
+    <AddForm saveNew={saveNew}/>
+
       </IonContent>
     </IonPage>
   );

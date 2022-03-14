@@ -1,0 +1,8 @@
+.save-button {
+    width: 70%;
+    margin: auto auto 10px auto;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+}
