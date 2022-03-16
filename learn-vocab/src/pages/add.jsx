@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonInput,IonButton, IonList } from '@ionic/react';
-import app, {wordsRef} from "../firebase-config";
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonInput, IonButton, IonList } from '@ionic/react';
+import app, { wordsRef } from "../firebase-config";
 import { Toast } from "@capacitor/toast";
 import './add.css';
 import './global.css';
 import AddForm from '../components/add-form';
 
-export default function Add() { 
- 
-// app js?
-  const saveNew =async (word) => {
+export default function Add() {
+
+  // app js?
+  const saveNew = async (word) => {
     debugger;
-    var url = wordsRef.toString()+".json";
+    var url = wordsRef.toString() + ".json";
 
     var response = await fetch(url, {
       method: "POST",
       body: JSON.stringify(word)
-  });
-  if (response.ok) {
-      
+    });
+    if (response.ok) {
+
 
       await Toast.show({
-          text: "New word created!"
+        text: "New word created!"
       });
-  } else {
+    } else {
       await Toast.show({
-          text: "Error. Try again!"
+        text: "Error. Try again!"
       });
-  }
+    }
 
   };
 
@@ -44,9 +44,9 @@ export default function Add() {
             <IonTitle size="large">Add new words!</IonTitle>
           </IonToolbar>
         </IonHeader>
-       
-    {/* Add new word form component */}
-    <AddForm saveNew={saveNew}/>
+
+        {/* new word form component */}
+        <AddForm saveNew={saveNew} />
 
       </IonContent>
     </IonPage>
