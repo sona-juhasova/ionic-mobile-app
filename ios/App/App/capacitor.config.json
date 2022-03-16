@@ -1,0 +1,6 @@
+{
+	"appId": "com.sonajuhasova.vocabularyapp",
+	"appName": "VocabularyApp",
+	"webDir": "learn-vocab/build",
+	"bundledWebRuntime": false
+}

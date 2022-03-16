@@ -9,8 +9,7 @@ import AddForm from '../components/add-form';
 export default function Add() {
 
   // app js?
-  const saveNew = async (word) => {
-    debugger;
+  const saveNew = async (word) => { 
     var url = wordsRef.toString() + ".json";
 
     var response = await fetch(url, {

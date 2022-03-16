@@ -21,6 +21,7 @@ export default app;
 
 // // Reference to posts in Realtime DB
 export const wordsRef = ref(database, "words");
+ 
 // // Reference to users in Realtime DB
 // export const usersRef = ref(database, "users");
 // // Get reference to specific post using post id
