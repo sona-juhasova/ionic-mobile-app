@@ -48,13 +48,13 @@ export default function AddForm({ saveNew }) {
               onIonChange={(e) => setMeaning(e.target.value)}></IonInput>
           </IonItem>
 
-          <IonItem onClick={takePicture} lines="none">
+          <IonItem onClick={takePicture} lines="full" style={{ padding: "30px 0 0 0" }} >
                 <IonLabel>Choose Image</IonLabel>
                 <IonButton>
                     <IonIcon slot="icon-only" icon={camera} />
                 </IonButton>
             </IonItem>
-            {image && <IonImg className="ion-padding" src={image} onClick={takePicture} />}
+            {image && <IonImg className="ion-padding" src={image} onClick={takePicture} class="uploaded-img"/>}
 
 
         </IonList>

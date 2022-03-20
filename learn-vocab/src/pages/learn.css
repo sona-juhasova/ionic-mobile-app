@@ -24,8 +24,12 @@
 
   .element-row {
       border-bottom: 1px solid rgba(0,0,0,0.27);
-      margin: 0 5px;
+      margin: 0 5px; 
   }
+
+ img{ 
+    max-height: 100px;
+}
   .element-column {  
     display: flex;
     justify-content: flex-start;
@@ -49,3 +53,7 @@
     margin: auto; 
 }
 
+.row-image {
+    width: 100px;
+    height: 100px;
+}

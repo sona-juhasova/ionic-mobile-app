@@ -40,7 +40,7 @@ export default function ReviseItem({ word, reload }) {
                 <div>{word.translation}</div>
             </ion-col>
             <ion-col class="element-column">
-            {word.image &&<IonImg src={word.image} />}
+            {word.image &&<IonImg src={word.image} class="row-image"/>}
                 <div>{word.meaning}</div>
 
             </ion-col>

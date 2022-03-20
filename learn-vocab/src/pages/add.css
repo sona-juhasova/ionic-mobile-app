@@ -6,3 +6,9 @@
     left: 0;
     right: 0;
 }
+
+.uploaded-img {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto auto auto;
+}

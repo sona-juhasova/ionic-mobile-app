@@ -34,20 +34,20 @@ return (
   <IonPage>
     <IonHeader>
       <IonToolbar>
-        <IonTitle>Learn</IonTitle>
+        <IonTitle >Learn</IonTitle>
       </IonToolbar>
     </IonHeader>
-    <IonContent fullscreen>
+    <IonContent fullscreen >
       <IonHeader collapse="condense">
         <IonToolbar>
-          <IonTitle size="large">Learn new words!</IonTitle>
+          <IonTitle size="large" class="page-title">Learn</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <ion-grid>
 
 
-      <IonList>
+      <IonList style={{ overflow: "scroll" }}>
       {words.filter(word => word.location === "learn").map(filteredWord => (
                         <LearnItem word={filteredWord} key={filteredWord.id} reload={loadWords} />
                     ))}

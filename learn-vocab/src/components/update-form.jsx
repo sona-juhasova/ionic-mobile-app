@@ -84,7 +84,7 @@ export default function UpdateForm({ id,saveUpdated, }) {
                     <IonIcon slot="icon-only" icon={camera} />
                 </IonButton>
             </IonItem>
-            {image && <IonImg className="ion-padding" src={image} onClick={takePicture} />}
+            {image && <IonImg className="ion-padding" src={image} onClick={takePicture} class="uploaded-img"/>}
 
 
         </IonList>

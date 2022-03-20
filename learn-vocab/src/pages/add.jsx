@@ -40,7 +40,7 @@ export default function Add() {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Add new words!</IonTitle>
+            <IonTitle size="large" class="page-title">Add new words</IonTitle>
           </IonToolbar>
         </IonHeader>
 

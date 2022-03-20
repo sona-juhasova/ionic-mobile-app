@@ -41,7 +41,7 @@ return (
     <IonContent fullscreen>
       <IonHeader collapse="condense">
         <IonToolbar>
-          <IonTitle size="large">Revise</IonTitle>
+          <IonTitle size="large" class="page-title">Revise</IonTitle>
         </IonToolbar>
       </IonHeader>
 

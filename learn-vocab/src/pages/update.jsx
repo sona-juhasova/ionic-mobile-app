@@ -42,7 +42,7 @@ export default function Update() {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Update</IonTitle>
+            <IonTitle size="large" class="page-title">Update</IonTitle>
           </IonToolbar>
         </IonHeader>
 

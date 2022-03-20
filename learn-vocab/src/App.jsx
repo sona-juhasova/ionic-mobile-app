@@ -16,6 +16,8 @@ import Add from './pages/add';
 import Revise from './pages/revise';
 import Update from './pages/update';
 
+import './pages/global.css';
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -59,18 +61,18 @@ export default function App() {
           <Update/>
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="learn" href="/learn">
-            <IonIcon icon={listOutline} />
-            <IonLabel>Learn</IonLabel>
+        <IonTabBar slot="bottom" >
+          <IonTabButton tab="learn" href="/learn" class="tab-bar">
+            <IonIcon icon={listOutline} color="#fff"/>
+            <IonLabel class="tab-label">Learn</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="add" href="/add">
+          <IonTabButton tab="add" href="/add" class="tab-bar">
             <IonIcon icon={addOutline} />
-            <IonLabel>Add</IonLabel>
+            <IonLabel class="tab-label">Add</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="revise" href="/revise">
+          <IonTabButton tab="revise" href="/revise" class="tab-bar">
             <IonIcon icon={checkmarkOutline} />
-            <IonLabel>Revise</IonLabel>
+            <IonLabel class="tab-label">Revise</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

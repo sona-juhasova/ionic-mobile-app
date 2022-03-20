@@ -1,3 +1,16 @@
-*{
-    /* background-color: #fff; */
+.tab-bar {
+    background-color: #fff;
+    padding: 5px;
 }
+
+.page-title {
+    background-color: #fff;
+    color: #145f6a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+}
+
+ 
