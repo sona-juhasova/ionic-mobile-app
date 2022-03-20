@@ -8,7 +8,7 @@ import app, { wordsRef } from "../firebase-config";
 import { useHistory } from "react-router-dom";
 
 
-export default function UpdateForm({ id,saveUpdated, }) { 
+export default function UpdateForm({ id,saveUpdated }) { 
   const [translation, setTranslation] = useState("");
   const [meaning, setMeaning] = useState("");
   const [image, setImage] = useState("");

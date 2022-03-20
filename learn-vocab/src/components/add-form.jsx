@@ -17,6 +17,7 @@ export default function AddForm({ saveNew }) {
     saveNew({ translation, meaning, location:"learn", image: image  });
     setTranslation("");
     setMeaning("");
+    setImage("");
     
   };
 
