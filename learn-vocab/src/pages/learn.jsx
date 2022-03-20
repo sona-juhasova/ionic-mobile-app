@@ -48,8 +48,8 @@ return (
 
 
       <IonList>
-                    {words.map(word => (
-                        <LearnItem word={word} key={word.id} reload={loadWords} />
+      {words.filter(word => word.location === "learn").map(filteredWord => (
+                        <LearnItem word={filteredWord} key={filteredWord.id} reload={loadWords} />
                     ))}
                 </IonList>
 

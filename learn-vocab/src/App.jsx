@@ -11,9 +11,10 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { listOutline, addOutline, checkmarkOutline } from 'ionicons/icons';
-import Tab1 from './pages/learn';
-import Tab2 from './pages/add';
-import Tab3 from './pages/revise';
+import Learn from './pages/learn';
+import Add from './pages/add';
+import Revise from './pages/revise';
+import Update from './pages/update';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -43,16 +44,19 @@ export default function App() {
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/learn">
-            <Tab1 />
+            <Learn/>
           </Route>
           <Route exact path="/add">
-            <Tab2 />
+            <Add />
           </Route>
           <Route path="/revise">
-            <Tab3 />
+            <Revise />
           </Route>
           <Route exact path="/">
             <Redirect to="/learn" />
+          </Route>
+          <Route exact path="/update/:id">
+          <Update/>
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
