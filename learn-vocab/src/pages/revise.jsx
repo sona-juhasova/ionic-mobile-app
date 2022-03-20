@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,useIonViewWillEnter,IonList} from '@ionic/react';
-import LearnItem from '../components/learn-item';
+import ReviseItem from '../components/revise-item';
 import './learn.css';
 import './global.css';
 import app, { wordsRef } from "../firebase-config";
@@ -50,7 +50,7 @@ return (
 
       <IonList>
       {words.filter(word => word.location === "revise").map(filteredWord => (
-                        <LearnItem word={filteredWord} key={filteredWord.id} reload={loadWords} />
+                        <ReviseItem word={filteredWord} key={filteredWord.id} reload={loadWords} />
                     ))}
                 </IonList>
 
