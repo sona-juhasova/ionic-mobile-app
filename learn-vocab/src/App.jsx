@@ -7,6 +7,7 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
+  IonToolbar,
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -61,6 +62,7 @@ export default function App() {
           <Update/>
           </Route>
         </IonRouterOutlet>
+
         <IonTabBar slot="bottom" >
           <IonTabButton tab="learn" href="/learn" class="tab-bar">
             <IonIcon icon={listOutline} color="#fff"/>
@@ -75,6 +77,7 @@ export default function App() {
             <IonLabel class="tab-label">Revise</IonLabel>
           </IonTabButton>
         </IonTabBar>
+   
       </IonTabs>
     </IonReactRouter>
   </IonApp>

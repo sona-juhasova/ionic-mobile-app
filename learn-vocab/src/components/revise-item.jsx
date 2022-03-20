@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonContent, IonItem, IonLabel, IonIcon, IonPopover, IonImg } from '@ionic/react';
+import { IonContent, IonItem, IonLabel, IonIcon, IonPopover, IonImg,IonCol, IonRow} from '@ionic/react';
 import { ellipsisVertical } from 'ionicons/icons';
 import '../pages/learn.css';
 import '../pages/global.css';
@@ -35,19 +35,19 @@ export default function ReviseItem({ word, reload }) {
 
     
     return (
-        <ion-row class="element-row">
-            <ion-col class="element-column">
+        <IonRow class="element-row">
+            <IonCol class="element-column">
                 <div>{word.translation}</div>
-            </ion-col>
-            <ion-col class="element-column">
+            </IonCol>
+            <IonCol class="element-column">
             {word.image &&<IonImg src={word.image} class="row-image"/>}
                 <div>{word.meaning}</div>
 
-            </ion-col>
+            </IonCol>
 
 
 
-            <ion-col size="1.5">
+            <IonCol size="1.5">
                 <IonIcon icon={ellipsisVertical} id={word.id + "nested-button"} class="element-column-dropdown" />
                 <IonPopover trigger={word.id + "nested-button"} dismissOnSelect={true}>
                     <IonContent>
@@ -65,10 +65,10 @@ export default function ReviseItem({ word, reload }) {
                     </IonContent>
                 </IonPopover>
 
-            </ion-col>
+            </IonCol>
 
 
-        </ion-row>
+        </IonRow>
     )
 
 }

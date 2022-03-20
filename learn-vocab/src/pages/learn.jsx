@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,useIonViewWillEnter,IonList} from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,useIonViewWillEnter,IonGrid} from '@ionic/react';
 import LearnItem from '../components/learn-item';
 import './learn.css';
 import './global.css';
@@ -37,23 +37,23 @@ return (
         <IonTitle >Learn</IonTitle>
       </IonToolbar>
     </IonHeader>
-    <IonContent fullscreen >
+    <IonContent fullscreen>
       <IonHeader collapse="condense">
         <IonToolbar>
           <IonTitle size="large" class="page-title">Learn</IonTitle>
         </IonToolbar>
       </IonHeader>
 
-      <ion-grid>
-
-
-      <IonList style={{ overflow: "scroll" }}>
+      <IonGrid>
+   
+      
       {words.filter(word => word.location === "learn").map(filteredWord => (
                         <LearnItem word={filteredWord} key={filteredWord.id} reload={loadWords} />
                     ))}
-                </IonList>
-
-      </ion-grid>
+                   
+                 
+      </IonGrid>
+  
 
 
     </IonContent>
