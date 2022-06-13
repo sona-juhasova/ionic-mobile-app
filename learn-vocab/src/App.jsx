@@ -11,11 +11,12 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { listOutline, addOutline, checkmarkOutline } from 'ionicons/icons';
+import { listOutline, addOutline, checkmarkOutline, createOutline } from 'ionicons/icons';
 import Learn from './pages/learn';
 import Add from './pages/add';
 import Revise from './pages/revise';
 import Update from './pages/update';
+import Test from './pages/test';
 
 import './pages/global.css';
 
@@ -55,6 +56,9 @@ export default function App() {
           <Route path="/revise">
             <Revise />
           </Route>
+          <Route path="/test">
+            <Test />
+          </Route>
           <Route exact path="/">
             <Redirect to="/learn" />
           </Route>
@@ -75,6 +79,10 @@ export default function App() {
           <IonTabButton tab="revise" href="/revise" class="tab-bar">
             <IonIcon icon={checkmarkOutline} />
             <IonLabel class="tab-label">Revise</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="test" href="/test" class="tab-bar">
+            <IonIcon icon={createOutline} />
+            <IonLabel class="tab-label">Test</IonLabel>
           </IonTabButton>
         </IonTabBar>
    

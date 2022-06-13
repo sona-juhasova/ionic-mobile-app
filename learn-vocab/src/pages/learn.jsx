@@ -22,6 +22,7 @@ export default function Learn() {
     const wordsArray = await getWords();
     
     setWords(wordsArray);
+    console.log(wordsArray);
 }
 
 useIonViewWillEnter(() => {

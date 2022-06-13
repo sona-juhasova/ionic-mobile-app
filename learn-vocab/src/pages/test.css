@@ -1,0 +1,29 @@
+.save-button {
+    width: 70%;
+    margin: auto auto 10px auto;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    width: 100%;
+}
+
+.question {
+    width: 100%;
+    text-align: center;
+}
+
+.test-input {
+    border: 1px solid black;
+    height: 50px;
+    width: 90%;
+    margin-top: 20px;
+
+}
