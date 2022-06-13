@@ -34,11 +34,11 @@ export default function Test(reload) {
       {
         //success 
       
-        setCheckAnswer("Correct, the answer is " + selectedWord.translation);
+        setCheckAnswer("Correct, " + selectedWord.translation + " means " + selectedWord.meaning );
       }else{
         //fail 
 
-        setCheckAnswer("Incorrect, the answer is " + selectedWord.translation);
+        setCheckAnswer("Your answer was incorrect, correct translation for "  + selectedWord.meaning + " is " + selectedWord.translation );
 
       }
     }
@@ -64,10 +64,10 @@ export default function Test(reload) {
 
         <IonContent>
           <div className="test">
-            <IonLabel className="question">translate: {selectedWord.meaning}</IonLabel>
+            <IonLabel className="question">{selectedWord.meaning}</IonLabel>
 
             <IonInput className='test-input' placeholder='Type in translation' value={filledWord} onIonChange={(e)=>{setFilledWord(e.target.value);}}></IonInput>
-            <IonLabel className="question">{checkAnswer}</IonLabel>
+            <IonLabel className="answer">{checkAnswer}</IonLabel>
 
           </div>
 

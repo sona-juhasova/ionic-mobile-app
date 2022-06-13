@@ -18,6 +18,16 @@
 .question {
     width: 100%;
     text-align: center;
+    margin-top: 40%;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.answer {
+    width: 100%;
+    text-align: center; 
+    width: 80%;
+
 }
 
 .test-input {
@@ -25,5 +35,6 @@
     height: 50px;
     width: 90%;
     margin-top: 20px;
+    margin-bottom: 20px;
 
 }
